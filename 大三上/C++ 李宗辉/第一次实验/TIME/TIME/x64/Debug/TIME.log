@@ -1,0 +1,6 @@
+﻿  源.cpp
+C:\Users\lenovo\Desktop\仓库\GradeThreeUP\大三上\C++ 李宗辉\第一次实验\TIME\TIME\源.cpp(11,11): warning C4244: “初始化”: 从“__int64”转换到“long”，可能丢失数据
+C:\Users\lenovo\Desktop\仓库\GradeThreeUP\大三上\C++ 李宗辉\第一次实验\TIME\TIME\源.cpp(12,12): warning C4244: “初始化”: 从“__int64”转换到“long”，可能丢失数据
+C:\Users\lenovo\Desktop\仓库\GradeThreeUP\大三上\C++ 李宗辉\第一次实验\TIME\TIME\源.cpp(13,11): warning C4244: “初始化”: 从“__int64”转换到“long”，可能丢失数据
+C:\Users\lenovo\Desktop\仓库\GradeThreeUP\大三上\C++ 李宗辉\第一次实验\TIME\TIME\源.cpp(14,15): warning C4244: “初始化”: 从“__int64”转换到“long”，可能丢失数据
+  TIME.vcxproj -> C:\Users\lenovo\Desktop\仓库\GradeThreeUP\大三上\C++ 李宗辉\第一次实验\TIME\x64\Debug\TIME.exe
