@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>软件缺陷预测与分析系统—主页</title>
+    <style>
+        body{
+            background: url("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.tukuppt.com%2Fpng_preview%2F00%2F40%2F17%2Fg5ow4jHKlo.jpg%21%2Ffw%2F780&refer=http%3A%2F%2Fimg.tukuppt.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668707856&t=d156d894080913b9d7d355d15f35a497");
+            background-size: cover;
+        }
+        #div_main{
+            /*margin: 10px;*/
+            position: absolute;
+            width: 40%;
+            height: 400px;
+            background-color: rgba(255 , 255 , 255 , 0.3);
+            border-radius: 25px;
+            box-shadow: 0 0 10px rgba(0 , 0 , 0 , 0.5);
+            margin: 8% 31%;
+            font-size: 15px;
+        }
+        #div_guide{
+            font-size: 30px;
+            font-family: 华文行楷,serif;
+            margin: 0 15%;
+            width: 80%;
+        }
+        .div_guide{
+            margin-top: 0;
+            vertical-align: middle;
+            width: 120px;
+            height: 120px;
+            margin-left: 20%;
+        }
+        ul{
+            list-style-type: none;
+            display: inline-block;
+        }
+        li{
+            display: inline-block;
+            width:300px;
+            height:20px;
+            text-align:center;
+            line-height:51px;
+            font-weight: 400;
+            float: none;
+        }
+        li:hover{
+            cursor:pointer;
+            font-weight:900;
+        }
+        a{
+            color: black;
+            text-decoration-line: none;
+            z-index: 2;
+            position: absolute;
+            margin-top: 35px;
+            font-size: 35px;
+            margin-left: 40px;
+        }
+        img{
+            max-height: 120px ;
+            max-width: 120px;
+            z-index: 1;
+            position: absolute;
+
+        }
+        #a_1{
+            margin-left: 30px;
+        }
+        span{
+            direction: ltr;
+            font-style: normal;
+            font-family: 华文行楷, serif;
+            position: absolute;
+            text-align: left;
+            font-size: 20px;
+            margin-left: 50px;
+        }
+        .btn{
+            position: absolute;
+            font-family: 华文行楷,serif;
+            font-size: 25px;
+            font-weight: 100;
+            width: 100px;
+            height: 35px;
+            /*left: 45%;*/
+            border-radius: 10px;
+        }
+        #btn_file{
+            position: absolute;
+            height: 25px;
+            width: 45%;
+            margin-left: 150px;
+        }
+        #btn_submit{
+            margin-left: 400px;
+        }
+        #btn_algorithm{
+            width: 30%;
+            margin-left: 150px;
+            height: 25px;
+            font-family: 楷体,serif;
+            font-size: 15px;
+        }
+        #btn_test{
+            margin-left: 100px;
+        }
+        #btn_reset{
+            margin-left: 400px;
+        }
+        #ta_result{
+            margin-left: 90px;
+            font-family: 楷体, serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<!--    <div id="div_title">-->
+<!--        <h1>软件缺陷分析与预测系统</h1>-->
+<!--    </div>-->
+    <div id="div_guide">
+        <ul>
+            <li>
+                <div class="div_guide">
+                    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.51yuansu.com%2Fpic3%2Fcover%2F03%2F24%2F26%2F5b7239fd27f80_610.jpg&refer=http%3A%2F%2Fbpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668707597&t=e964fdf8dcbba9e2c3da52529b59fc34" >
+<!--                <a href="main.html" target="mainFrame1">首页</a>-->
+                    <a href="http://localhost:8080/toMain" target="_self" id="a_1">首页</a>
+                </div>
+            </li>
+            <li>
+                <div class="div_guide">
+                    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.51yuansu.com%2Fpic3%2Fcover%2F03%2F24%2F26%2F5b7239fd27f80_610.jpg&refer=http%3A%2F%2Fbpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668707597&t=e964fdf8dcbba9e2c3da52529b59fc34" >
+                <!--<a href="information.html" target="mainFrame1">用户中心</a>-->
+                     <a href="http://localhost:8080/toUserCenter" target="_self" id="a_2">用户中心</a>
+                </div>
+            </li>
+            <li>
+                <div class="div_guide">
+                    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.51yuansu.com%2Fpic3%2Fcover%2F03%2F24%2F26%2F5b7239fd27f80_610.jpg&refer=http%3A%2F%2Fbpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668707597&t=e964fdf8dcbba9e2c3da52529b59fc34" >
+<!--                <a href="Login.html" target="mainFrame1">退出登录</a>-->
+                    <a href="http://localhost:8080/toLogin" target="_self" id="a_3">退出登录</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="div_main">
+        <div id="div_main_page">
+            <form name="uploadForm" method="post" id="form_main"
+                  enctype="multipart/form-data"
+                  th:action="@{/upload}" target="iframe">
+                <br><br>
+                <span>上传文件:</span>
+                <input  type="file" name="upload" accept="text/csv"  id="btn_file">
+                <input type="submit" id="btn_submit" name="btn_submit" value="上传" class="btn">
+                <br><br><br><br>
+                <span>算法选择:</span>
+                <select name="algorithm" id="btn_algorithm" class="btn">
+                             <option value="逻辑回归">逻辑回归</option>
+                             <option value="KNN">KNN</option>
+                             <option value="感知机">感知机</option>
+                         </select>
+                <br><br><br><br>
+<!--                <input type="submit" id="btn_submit" name="btn_submit" value="上传">-->
+                <button type="button" id="btn_test" class="btn" v-on:click="getValue()">检测</button>
+                <input type="reset"  id="btn_reset" class="btn" value="重置">
+                <br><br><br><br>
+            </form>
+            <iframe name="iframe" id="iframe" style="display:none"></iframe>
+            <label>
+                <textarea id="ta_result" cols="35" rows="3" readonly>此处展示训练结果</textarea>
+            </label>
+        </div>
+    </div>
+    <!-- Additional JS -->
+    <script th:src="@{/js/bootstrap.bundle.min.js?1413}" src="./js/bootstrap.bundle.min.js?1413"></script>
+    <script th:src="@{/js/blocs.min.js?3842}" src="./js/blocs.min.js?3842"></script>
+    <script th:src="@{/js/jqBootstrapValidation.js}" src="./js/jqBootstrapValidation.js"></script>
+    <script th:src="@{/js/formHandler.js?2118}" src="./js/formHandler.js?2118"></script>
+    <script th:src="@{/js/lazysizes.min.js}" src="./js/lazysizes.min.js" defer></script>
+
+    <script th:src="@{/js/jquery.min.js}"  type="text/javascript" charset="utf-8"></script>
+    <script th:src="@{/js/vue.js}"  type="text/javascript" charset="utf-8"></script>
+    <script th:src="@{/js/axios.min.js}"  type="text/javascript" charset="utf-8"></script>
+    <script th:src="@{/js/jquery.form.js}" src="../static/js/jquery.form.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!--js-->
+    <script>
+    <!--   form提交     -->
+    let uploadForm = document.getElementById("form_main");
+    // let outputTA = document.getElementById("ta_result");
+    let test = document.getElementById("btn_test");
+    uploadForm.submit();
+    let main_page=new Vue({
+        el:"#form_main",
+        data: {
+            OK :200,
+            ERROR:203,
+            FAIL:-1
+        },
+        methods:{
+            getValue:function (){
+
+                let outputTA = document.getElementById("ta_result");
+                let mySelect = document.getElementById("btn_algorithm");
+                let algorithm = mySelect.options[mySelect.selectedIndex].value;
+                axios({
+                    method: "get",
+                    url: "calculate/" + algorithm
+                })
+                    .then(function (value) {
+                        // alert(value);
+                        outputTA.innerText = algorithm + "算法的预测准确率为: " + value.data;
+                    })
+                    .catch();
+                }
+            }
+    })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>软件缺陷预测与分析系统—登录</title>
+    <style>
+        body{
+            /*background-image: url("../static/img/2.jpg");*/
+            background: url("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.tukuppt.com%2Fpng_preview%2F00%2F40%2F17%2Fg5ow4jHKlo.jpg%21%2Ffw%2F780&refer=http%3A%2F%2Fimg.tukuppt.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668707856&t=d156d894080913b9d7d355d15f35a497");
+            background-size: cover;
+        }
+        span{
+            direction: ltr;
+            font-family: 华文行楷,serif;
+            font-style: normal;
+            /*color: rgb(144, 216, 238);*/
+            position: absolute;
+            text-align: left;
+            font-size: 25px;
+        }
+        #title{
+            left: 31%;
+            top: 10%;
+            font-weight: bold;
+            font-size: 60px;
+            width: content-box;
+        }
+        #userid{
+            left: 40%;
+            top: 35%;
+        }
+        #password{
+            left: 40%;
+            top: 45%;
+        }
+        #warn_id{
+            left: 50%;
+            top: 40%;
+            color: red;
+            font-size: 20px;
+        }
+        #warn_password{
+            left: 50%;
+            top: 50%;
+            color: red;
+            font-size: 20px;
+        }
+        input{
+            position: absolute;
+            font-family: 华文行楷,serif;
+            width: 20%;
+            height: 25px;
+            left: 45%;
+            border-radius: 10px;
+            /*border-radius: 25px;*/
+            /*box-shadow: 5px 5px 10px rgba(0 , 0 , 0 , 0.5);*/
+        }
+        #userid_in{
+            top: 35%;
+        }
+        #password_in{
+            top: 45%;
+        }
+        #btn_login{
+            left: 48%;
+            top: 55%;
+            width: 10%;
+            height: 35px;
+            text-indent: 0;
+            /*color: rgba(144, 216, 238, 1);*/
+            font-size: 28px;
+            font-weight: 400;
+            border-radius: 10px;
+            /*border-radius: 5px;*/
+            /*border-color: rgba(0, 0, 0, 0.2);*/
+
+        }
+        #div_login{
+            width: 30%;
+            height: 280px;
+            border: solid rgba(0, 0, 0, 0.3);
+            margin-left: 38%;
+            margin-top: 15%;
+            border-radius: 25px;
+            box-shadow: 5px 5px 10px rgba(0 , 0 , 0 , 0.5);
+        }
+        #div_register{
+            font-family: 华文行楷,serif;
+            margin-top: 58%;
+            margin-left: 55%;
+        }
+    </style>
+</head>
+<body>
+    <div id="div_login">
+       <form action="" method="get" name="login" id="form_login">
+
+           <span id="title">软件缺陷预测与分析系统</span>
+
+           <span id="userid" >账号：</span>
+           <input id="userid_in" placeholder="请输入账号" type="text" size="medium">
+           <span id="warn_id" v-show="userID" >账号不能为空！</span>
+
+           <span id="password" >密码：</span>
+           <input id="password_in" placeholder="请输入密码" type="password">
+           <span id="warn_password" v-show="userPW" >密码不能为空！</span>
+
+           <input id="btn_login" type="button" value="登录" v-on:click="login()">
+
+           <div id="div_register">
+               <i id="register">还没有账号？</i>
+               <a href="http://localhost:8080/toRegister" target="_self">点此注册!</a>
+           </div>
+
+       </form>
+    </div>
+    <!-- Additional JS -->
+    <script th:src="@{/js/bootstrap.bundle.min.js?1413}" src="./js/bootstrap.bundle.min.js?1413"></script>
+    <script th:src="@{/js/blocs.min.js?3842}" src="./js/blocs.min.js?3842"></script>
+    <script th:src="@{/js/jqBootstrapValidation.js}" src="./js/jqBootstrapValidation.js"></script>
+    <script th:src="@{/js/formHandler.js?2118}" src="./js/formHandler.js?2118"></script>
+    <script th:src="@{/js/lazysizes.min.js}" src="./js/lazysizes.min.js" defer></script>
+
+    <script th:src="@{/js/jquery.min.js}"  type="text/javascript" charset="utf-8"></script>
+    <script th:src="@{/js/vue.js}"  type="text/javascript" charset="utf-8"></script>
+    <script th:src="@{/js/axios.min.js}"  type="text/javascript" charset="utf-8"></script>
+    <!--js连接-->
+    <script>
+        // let username = document.getElementById("userid_in");
+        // let password = document.getElementById("password_in");
+        // window.onload = function () {
+        //     let submit = document.getElementById("btn_login");
+        //     submit.onclick = function (){
+        //         if(confirm("是否确认信息？")){
+        //             submit.form.action= "/index/" + username + "/" + password;
+        //         }
+        //     }
+        // }
+        let loginForm = new Vue({
+            el:"#form_login",  //作用范围：id=form_login的标签及其内部
+            //定义数据
+            data: {
+                //一些常量
+                OK :200,
+                ERROR:203,
+            },
+            data () {
+                return {
+                    userID:false,
+                    userPW:false,
+                }
+            },
+            //定义方法
+            methods: {
+                //1.登录方法
+                login:function () {
+                    let username = $("#userid_in").val();
+                    let password = $("#password_in").val();
+
+                    this.userID = false;
+                    this.userPW = false;
+                    if (username === "")
+                    {
+                        this.userID = true;
+                    }
+                    if (password === "")
+                    {
+                        this.userPW = true;
+                    }
+
+                    axios({
+                        method: "get",
+                        url: "login/" + username +"/"+ password
+                    })
+                        .then(function (value) {
+                            if(value.data.code === 200) {
+                                //alert("登录成功");
+                                window.location.href = "http://localhost:8080/toMain";
+                            }else{
+                                alert("用户名或密码错误!");
+                            }
+                        })
+                        .catch();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
