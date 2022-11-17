@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.bugcheck.mapper.DataMapper" >
+  <resultMap id="BaseResultMap" type="com.example.bugcheck.pojo.table.Data" >
+    <id column="Id" property="id" jdbcType="INTEGER" />
+    <result column="ck_oo_numberOfPrivateMethods" property="ckOoNumberofprivatemethods" jdbcType="DOUBLE" />
+    <result column="LDHH_lcom" property="ldhhLcom" jdbcType="DOUBLE" />
+    <result column="LDHH_fanIn" property="ldhhFanin" jdbcType="DOUBLE" />
+    <result column="numberOfNonTrivialBugsFoundUntil" property="numberofnontrivialbugsfounduntil" jdbcType="DOUBLE" />
+    <result column="WCHU_numberOfPublicAttributes" property="wchuNumberofpublicattributes" jdbcType="DOUBLE" />
+    <result column="WCHU_numberOfAttributes" property="wchuNumberofattributes" jdbcType="DOUBLE" />
+    <result column="CvsWEntropy" property="cvswentropy" jdbcType="DOUBLE" />
+    <result column="LDHH_numberOfPublicMethods" property="ldhhNumberofpublicmethods" jdbcType="DOUBLE" />
+    <result column="WCHU_fanIn" property="wchuFanin" jdbcType="DOUBLE" />
+    <result column="LDHH_numberOfPrivateAttributes" property="ldhhNumberofprivateattributes" jdbcType="DOUBLE" />
+    <result column="CvsEntropy" property="cvsentropy" jdbcType="DOUBLE" />
+    <result column="LDHH_numberOfPublicAttributes" property="ldhhNumberofpublicattributes" jdbcType="DOUBLE" />
+    <result column="WCHU_numberOfPrivateMethods" property="wchuNumberofprivatemethods" jdbcType="DOUBLE" />
+    <result column="WCHU_numberOfMethods" property="wchuNumberofmethods" jdbcType="DOUBLE" />
+    <result column="ck_oo_numberOfPublicAttributes" property="ckOoNumberofpublicattributes" jdbcType="DOUBLE" />
+    <result column="ck_oo_noc" property="ckOoNoc" jdbcType="DOUBLE" />
+    <result column="numberOfCriticalBugsFoundUntil" property="numberofcriticalbugsfounduntil" jdbcType="DOUBLE" />
+    <result column="ck_oo_wmc" property="ckOoWmc" jdbcType="DOUBLE" />
+    <result column="LDHH_numberOfPrivateMethods" property="ldhhNumberofprivatemethods" jdbcType="DOUBLE" />
+    <result column="WCHU_numberOfPrivateAttributes" property="wchuNumberofprivateattributes" jdbcType="DOUBLE" />
+    <result column="WCHU_noc" property="wchuNoc" jdbcType="DOUBLE" />
+    <result column="ck_oo_fanOut" property="ckOoFanout" jdbcType="DOUBLE" />
+    <result column="CvsLogEntropy" property="cvslogentropy" jdbcType="DOUBLE" />
+    <result column="LDHH_numberOfAttributesInherited" property="ldhhNumberofattributesinherited" jdbcType="DOUBLE" />
+    <result column="ck_oo_numberOfLinesOfCode" property="ckOoNumberoflinesofcode" jdbcType="DOUBLE" />
+    <result column="ck_oo_dit" property="ckOoDit" jdbcType="DOUBLE" />
+    <result column="WCHU_wmc" property="wchuWmc" jdbcType="DOUBLE" />
+    <result column="LDHH_noc" property="ldhhNoc" jdbcType="DOUBLE" />
+    <result column="ck_oo_numberOfMethods" property="ckOoNumberofmethods" jdbcType="DOUBLE" />
+    <result column="ck_oo_numberOfAttributesInherited" property="ckOoNumberofattributesinherited" jdbcType="DOUBLE" />
+    <result column="WCHU_dit" property="wchuDit" jdbcType="DOUBLE" />
+    <result column="ck_oo_lcom" property="ckOoLcom" jdbcType="DOUBLE" />
+    <result column="ck_oo_fanIn" property="ckOoFanin" jdbcType="DOUBLE" />
+    <result column="WCHU_numberOfAttributesInherited" property="wchuNumberofattributesinherited" jdbcType="DOUBLE" />
+    <result column="ck_oo_rfc" property="ckOoRfc" jdbcType="DOUBLE" />
+    <result column="LDHH_wmc" property="ldhhWmc" jdbcType="DOUBLE" />
+    <result column="LDHH_numberOfAttributes" property="ldhhNumberofattributes" jdbcType="DOUBLE" />
+    <result column="LDHH_numberOfLinesOfCode" property="ldhhNumberoflinesofcode" jdbcType="DOUBLE" />
+    <result column="WCHU_fanOut" property="wchuFanout" jdbcType="DOUBLE" />
+    <result column="WCHU_lcom" property="wchuLcom" jdbcType="DOUBLE" />
+    <result column="ck_oo_cbo" property="ckOoCbo" jdbcType="DOUBLE" />
+    <result column="WCHU_rfc" property="wchuRfc" jdbcType="DOUBLE" />
+    <result column="ck_oo_numberOfAttributes" property="ckOoNumberofattributes" jdbcType="DOUBLE" />
+    <result column="numberOfHighPriorityBugsFoundUntil" property="numberofhighprioritybugsfounduntil" jdbcType="DOUBLE" />
+    <result column="ck_oo_numberOfPrivateAttributes" property="ckOoNumberofprivateattributes" jdbcType="DOUBLE" />
+    <result column="numberOfMajorBugsFoundUntil" property="numberofmajorbugsfounduntil" jdbcType="DOUBLE" />
+    <result column="WCHU_numberOfPublicMethods" property="wchuNumberofpublicmethods" jdbcType="DOUBLE" />
+    <result column="LDHH_dit" property="ldhhDit" jdbcType="DOUBLE" />
+    <result column="WCHU_cbo" property="wchuCbo" jdbcType="DOUBLE" />
+    <result column="CvsLinEntropy" property="cvslinentropy" jdbcType="DOUBLE" />
+    <result column="WCHU_numberOfMethodsInherited" property="wchuNumberofmethodsinherited" jdbcType="DOUBLE" />
+    <result column="numberOfBugsFoundUntil" property="numberofbugsfounduntil" jdbcType="DOUBLE" />
+    <result column="LDHH_fanOut" property="ldhhFanout" jdbcType="DOUBLE" />
+    <result column="LDHH_numberOfMethodsInherited" property="ldhhNumberofmethodsinherited" jdbcType="DOUBLE" />
+    <result column="LDHH_rfc" property="ldhhRfc" jdbcType="DOUBLE" />
+    <result column="ck_oo_numberOfMethodsInherited" property="ckOoNumberofmethodsinherited" jdbcType="DOUBLE" />
+    <result column="ck_oo_numberOfPublicMethods" property="ckOoNumberofpublicmethods" jdbcType="DOUBLE" />
+    <result column="LDHH_cbo" property="ldhhCbo" jdbcType="DOUBLE" />
+    <result column="WCHU_numberOfLinesOfCode" property="wchuNumberoflinesofcode" jdbcType="DOUBLE" />
+    <result column="CvsExpEntropy" property="cvsexpentropy" jdbcType="DOUBLE" />
+    <result column="LDHH_numberOfMethods" property="ldhhNumberofmethods" jdbcType="DOUBLE" />
+    <result column="classes" property="classes" jdbcType="DOUBLE" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    Id, ck_oo_numberOfPrivateMethods, LDHH_lcom, LDHH_fanIn, numberOfNonTrivialBugsFoundUntil, 
+    WCHU_numberOfPublicAttributes, WCHU_numberOfAttributes, CvsWEntropy, LDHH_numberOfPublicMethods, 
+    WCHU_fanIn, LDHH_numberOfPrivateAttributes, CvsEntropy, LDHH_numberOfPublicAttributes, 
+    WCHU_numberOfPrivateMethods, WCHU_numberOfMethods, ck_oo_numberOfPublicAttributes, 
+    ck_oo_noc, numberOfCriticalBugsFoundUntil, ck_oo_wmc, LDHH_numberOfPrivateMethods, 
+    WCHU_numberOfPrivateAttributes, WCHU_noc, ck_oo_fanOut, CvsLogEntropy, LDHH_numberOfAttributesInherited, 
+    ck_oo_numberOfLinesOfCode, ck_oo_dit, WCHU_wmc, LDHH_noc, ck_oo_numberOfMethods, 
+    ck_oo_numberOfAttributesInherited, WCHU_dit, ck_oo_lcom, ck_oo_fanIn, WCHU_numberOfAttributesInherited, 
+    ck_oo_rfc, LDHH_wmc, LDHH_numberOfAttributes, LDHH_numberOfLinesOfCode, WCHU_fanOut, 
+    WCHU_lcom, ck_oo_cbo, WCHU_rfc, ck_oo_numberOfAttributes, numberOfHighPriorityBugsFoundUntil, 
+    ck_oo_numberOfPrivateAttributes, numberOfMajorBugsFoundUntil, WCHU_numberOfPublicMethods, 
+    LDHH_dit, WCHU_cbo, CvsLinEntropy, WCHU_numberOfMethodsInherited, numberOfBugsFoundUntil, 
+    LDHH_fanOut, LDHH_numberOfMethodsInherited, LDHH_rfc, ck_oo_numberOfMethodsInherited, 
+    ck_oo_numberOfPublicMethods, LDHH_cbo, WCHU_numberOfLinesOfCode, CvsExpEntropy, LDHH_numberOfMethods, 
+    classes
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.example.bugcheck.pojo.table.DataExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from data
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from data
+    where Id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from data
+    where Id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.example.bugcheck.pojo.table.DataExample" >
+    delete from data
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.example.bugcheck.pojo.table.Data" >
+    insert into data (Id, ck_oo_numberOfPrivateMethods, LDHH_lcom, 
+      LDHH_fanIn, numberOfNonTrivialBugsFoundUntil, 
+      WCHU_numberOfPublicAttributes, WCHU_numberOfAttributes, 
+      CvsWEntropy, LDHH_numberOfPublicMethods, WCHU_fanIn, 
+      LDHH_numberOfPrivateAttributes, CvsEntropy, 
+      LDHH_numberOfPublicAttributes, WCHU_numberOfPrivateMethods, 
+      WCHU_numberOfMethods, ck_oo_numberOfPublicAttributes, 
+      ck_oo_noc, numberOfCriticalBugsFoundUntil, 
+      ck_oo_wmc, LDHH_numberOfPrivateMethods, WCHU_numberOfPrivateAttributes, 
+      WCHU_noc, ck_oo_fanOut, CvsLogEntropy, 
+      LDHH_numberOfAttributesInherited, ck_oo_numberOfLinesOfCode, 
+      ck_oo_dit, WCHU_wmc, LDHH_noc, 
+      ck_oo_numberOfMethods, ck_oo_numberOfAttributesInherited, 
+      WCHU_dit, ck_oo_lcom, ck_oo_fanIn, 
+      WCHU_numberOfAttributesInherited, ck_oo_rfc, 
+      LDHH_wmc, LDHH_numberOfAttributes, LDHH_numberOfLinesOfCode, 
+      WCHU_fanOut, WCHU_lcom, ck_oo_cbo, 
+      WCHU_rfc, ck_oo_numberOfAttributes, numberOfHighPriorityBugsFoundUntil, 
+      ck_oo_numberOfPrivateAttributes, numberOfMajorBugsFoundUntil, 
+      WCHU_numberOfPublicMethods, LDHH_dit, WCHU_cbo, 
+      CvsLinEntropy, WCHU_numberOfMethodsInherited, 
+      numberOfBugsFoundUntil, LDHH_fanOut, LDHH_numberOfMethodsInherited, 
+      LDHH_rfc, ck_oo_numberOfMethodsInherited, ck_oo_numberOfPublicMethods, 
+      LDHH_cbo, WCHU_numberOfLinesOfCode, CvsExpEntropy, 
+      LDHH_numberOfMethods, classes)
+    values (#{id,jdbcType=INTEGER}, #{ckOoNumberofprivatemethods,jdbcType=DOUBLE}, #{ldhhLcom,jdbcType=DOUBLE}, 
+      #{ldhhFanin,jdbcType=DOUBLE}, #{numberofnontrivialbugsfounduntil,jdbcType=DOUBLE}, 
+      #{wchuNumberofpublicattributes,jdbcType=DOUBLE}, #{wchuNumberofattributes,jdbcType=DOUBLE}, 
+      #{cvswentropy,jdbcType=DOUBLE}, #{ldhhNumberofpublicmethods,jdbcType=DOUBLE}, #{wchuFanin,jdbcType=DOUBLE}, 
+      #{ldhhNumberofprivateattributes,jdbcType=DOUBLE}, #{cvsentropy,jdbcType=DOUBLE}, 
+      #{ldhhNumberofpublicattributes,jdbcType=DOUBLE}, #{wchuNumberofprivatemethods,jdbcType=DOUBLE}, 
+      #{wchuNumberofmethods,jdbcType=DOUBLE}, #{ckOoNumberofpublicattributes,jdbcType=DOUBLE}, 
+      #{ckOoNoc,jdbcType=DOUBLE}, #{numberofcriticalbugsfounduntil,jdbcType=DOUBLE}, 
+      #{ckOoWmc,jdbcType=DOUBLE}, #{ldhhNumberofprivatemethods,jdbcType=DOUBLE}, #{wchuNumberofprivateattributes,jdbcType=DOUBLE}, 
+      #{wchuNoc,jdbcType=DOUBLE}, #{ckOoFanout,jdbcType=DOUBLE}, #{cvslogentropy,jdbcType=DOUBLE}, 
+      #{ldhhNumberofattributesinherited,jdbcType=DOUBLE}, #{ckOoNumberoflinesofcode,jdbcType=DOUBLE}, 
+      #{ckOoDit,jdbcType=DOUBLE}, #{wchuWmc,jdbcType=DOUBLE}, #{ldhhNoc,jdbcType=DOUBLE}, 
+      #{ckOoNumberofmethods,jdbcType=DOUBLE}, #{ckOoNumberofattributesinherited,jdbcType=DOUBLE}, 
+      #{wchuDit,jdbcType=DOUBLE}, #{ckOoLcom,jdbcType=DOUBLE}, #{ckOoFanin,jdbcType=DOUBLE}, 
+      #{wchuNumberofattributesinherited,jdbcType=DOUBLE}, #{ckOoRfc,jdbcType=DOUBLE}, 
+      #{ldhhWmc,jdbcType=DOUBLE}, #{ldhhNumberofattributes,jdbcType=DOUBLE}, #{ldhhNumberoflinesofcode,jdbcType=DOUBLE}, 
+      #{wchuFanout,jdbcType=DOUBLE}, #{wchuLcom,jdbcType=DOUBLE}, #{ckOoCbo,jdbcType=DOUBLE}, 
+      #{wchuRfc,jdbcType=DOUBLE}, #{ckOoNumberofattributes,jdbcType=DOUBLE}, #{numberofhighprioritybugsfounduntil,jdbcType=DOUBLE}, 
+      #{ckOoNumberofprivateattributes,jdbcType=DOUBLE}, #{numberofmajorbugsfounduntil,jdbcType=DOUBLE}, 
+      #{wchuNumberofpublicmethods,jdbcType=DOUBLE}, #{ldhhDit,jdbcType=DOUBLE}, #{wchuCbo,jdbcType=DOUBLE}, 
+      #{cvslinentropy,jdbcType=DOUBLE}, #{wchuNumberofmethodsinherited,jdbcType=DOUBLE}, 
+      #{numberofbugsfounduntil,jdbcType=DOUBLE}, #{ldhhFanout,jdbcType=DOUBLE}, #{ldhhNumberofmethodsinherited,jdbcType=DOUBLE}, 
+      #{ldhhRfc,jdbcType=DOUBLE}, #{ckOoNumberofmethodsinherited,jdbcType=DOUBLE}, #{ckOoNumberofpublicmethods,jdbcType=DOUBLE}, 
+      #{ldhhCbo,jdbcType=DOUBLE}, #{wchuNumberoflinesofcode,jdbcType=DOUBLE}, #{cvsexpentropy,jdbcType=DOUBLE}, 
+      #{ldhhNumberofmethods,jdbcType=DOUBLE}, #{classes,jdbcType=DOUBLE})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.bugcheck.pojo.table.Data" >
+    insert into data
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        Id,
+      </if>
+      <if test="ckOoNumberofprivatemethods != null" >
+        ck_oo_numberOfPrivateMethods,
+      </if>
+      <if test="ldhhLcom != null" >
+        LDHH_lcom,
+      </if>
+      <if test="ldhhFanin != null" >
+        LDHH_fanIn,
+      </if>
+      <if test="numberofnontrivialbugsfounduntil != null" >
+        numberOfNonTrivialBugsFoundUntil,
+      </if>
+      <if test="wchuNumberofpublicattributes != null" >
+        WCHU_numberOfPublicAttributes,
+      </if>
+      <if test="wchuNumberofattributes != null" >
+        WCHU_numberOfAttributes,
+      </if>
+      <if test="cvswentropy != null" >
+        CvsWEntropy,
+      </if>
+      <if test="ldhhNumberofpublicmethods != null" >
+        LDHH_numberOfPublicMethods,
+      </if>
+      <if test="wchuFanin != null" >
+        WCHU_fanIn,
+      </if>
+      <if test="ldhhNumberofprivateattributes != null" >
+        LDHH_numberOfPrivateAttributes,
+      </if>
+      <if test="cvsentropy != null" >
+        CvsEntropy,
+      </if>
+      <if test="ldhhNumberofpublicattributes != null" >
+        LDHH_numberOfPublicAttributes,
+      </if>
+      <if test="wchuNumberofprivatemethods != null" >
+        WCHU_numberOfPrivateMethods,
+      </if>
+      <if test="wchuNumberofmethods != null" >
+        WCHU_numberOfMethods,
+      </if>
+      <if test="ckOoNumberofpublicattributes != null" >
+        ck_oo_numberOfPublicAttributes,
+      </if>
+      <if test="ckOoNoc != null" >
+        ck_oo_noc,
+      </if>
+      <if test="numberofcriticalbugsfounduntil != null" >
+        numberOfCriticalBugsFoundUntil,
+      </if>
+      <if test="ckOoWmc != null" >
+        ck_oo_wmc,
+      </if>
+      <if test="ldhhNumberofprivatemethods != null" >
+        LDHH_numberOfPrivateMethods,
+      </if>
+      <if test="wchuNumberofprivateattributes != null" >
+        WCHU_numberOfPrivateAttributes,
+      </if>
+      <if test="wchuNoc != null" >
+        WCHU_noc,
+      </if>
+      <if test="ckOoFanout != null" >
+        ck_oo_fanOut,
+      </if>
+      <if test="cvslogentropy != null" >
+        CvsLogEntropy,
+      </if>
+      <if test="ldhhNumberofattributesinherited != null" >
+        LDHH_numberOfAttributesInherited,
+      </if>
+      <if test="ckOoNumberoflinesofcode != null" >
+        ck_oo_numberOfLinesOfCode,
+      </if>
+      <if test="ckOoDit != null" >
+        ck_oo_dit,
+      </if>
+      <if test="wchuWmc != null" >
+        WCHU_wmc,
+      </if>
+      <if test="ldhhNoc != null" >
+        LDHH_noc,
+      </if>
+      <if test="ckOoNumberofmethods != null" >
+        ck_oo_numberOfMethods,
+      </if>
+      <if test="ckOoNumberofattributesinherited != null" >
+        ck_oo_numberOfAttributesInherited,
+      </if>
+      <if test="wchuDit != null" >
+        WCHU_dit,
+      </if>
+      <if test="ckOoLcom != null" >
+        ck_oo_lcom,
+      </if>
+      <if test="ckOoFanin != null" >
+        ck_oo_fanIn,
+      </if>
+      <if test="wchuNumberofattributesinherited != null" >
+        WCHU_numberOfAttributesInherited,
+      </if>
+      <if test="ckOoRfc != null" >
+        ck_oo_rfc,
+      </if>
+      <if test="ldhhWmc != null" >
+        LDHH_wmc,
+      </if>
+      <if test="ldhhNumberofattributes != null" >
+        LDHH_numberOfAttributes,
+      </if>
+      <if test="ldhhNumberoflinesofcode != null" >
+        LDHH_numberOfLinesOfCode,
+      </if>
+      <if test="wchuFanout != null" >
+        WCHU_fanOut,
+      </if>
+      <if test="wchuLcom != null" >
+        WCHU_lcom,
+      </if>
+      <if test="ckOoCbo != null" >
+        ck_oo_cbo,
+      </if>
+      <if test="wchuRfc != null" >
+        WCHU_rfc,
+      </if>
+      <if test="ckOoNumberofattributes != null" >
+        ck_oo_numberOfAttributes,
+      </if>
+      <if test="numberofhighprioritybugsfounduntil != null" >
+        numberOfHighPriorityBugsFoundUntil,
+      </if>
+      <if test="ckOoNumberofprivateattributes != null" >
+        ck_oo_numberOfPrivateAttributes,
+      </if>
+      <if test="numberofmajorbugsfounduntil != null" >
+        numberOfMajorBugsFoundUntil,
+      </if>
+      <if test="wchuNumberofpublicmethods != null" >
+        WCHU_numberOfPublicMethods,
+      </if>
+      <if test="ldhhDit != null" >
+        LDHH_dit,
+      </if>
+      <if test="wchuCbo != null" >
+        WCHU_cbo,
+      </if>
+      <if test="cvslinentropy != null" >
+        CvsLinEntropy,
+      </if>
+      <if test="wchuNumberofmethodsinherited != null" >
+        WCHU_numberOfMethodsInherited,
+      </if>
+      <if test="numberofbugsfounduntil != null" >
+        numberOfBugsFoundUntil,
+      </if>
+      <if test="ldhhFanout != null" >
+        LDHH_fanOut,
+      </if>
+      <if test="ldhhNumberofmethodsinherited != null" >
+        LDHH_numberOfMethodsInherited,
+      </if>
+      <if test="ldhhRfc != null" >
+        LDHH_rfc,
+      </if>
+      <if test="ckOoNumberofmethodsinherited != null" >
+        ck_oo_numberOfMethodsInherited,
+      </if>
+      <if test="ckOoNumberofpublicmethods != null" >
+        ck_oo_numberOfPublicMethods,
+      </if>
+      <if test="ldhhCbo != null" >
+        LDHH_cbo,
+      </if>
+      <if test="wchuNumberoflinesofcode != null" >
+        WCHU_numberOfLinesOfCode,
+      </if>
+      <if test="cvsexpentropy != null" >
+        CvsExpEntropy,
+      </if>
+      <if test="ldhhNumberofmethods != null" >
+        LDHH_numberOfMethods,
+      </if>
+      <if test="classes != null" >
+        classes,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="ckOoNumberofprivatemethods != null" >
+        #{ckOoNumberofprivatemethods,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhLcom != null" >
+        #{ldhhLcom,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhFanin != null" >
+        #{ldhhFanin,jdbcType=DOUBLE},
+      </if>
+      <if test="numberofnontrivialbugsfounduntil != null" >
+        #{numberofnontrivialbugsfounduntil,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNumberofpublicattributes != null" >
+        #{wchuNumberofpublicattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNumberofattributes != null" >
+        #{wchuNumberofattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="cvswentropy != null" >
+        #{cvswentropy,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNumberofpublicmethods != null" >
+        #{ldhhNumberofpublicmethods,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuFanin != null" >
+        #{wchuFanin,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNumberofprivateattributes != null" >
+        #{ldhhNumberofprivateattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="cvsentropy != null" >
+        #{cvsentropy,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNumberofpublicattributes != null" >
+        #{ldhhNumberofpublicattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNumberofprivatemethods != null" >
+        #{wchuNumberofprivatemethods,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNumberofmethods != null" >
+        #{wchuNumberofmethods,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoNumberofpublicattributes != null" >
+        #{ckOoNumberofpublicattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoNoc != null" >
+        #{ckOoNoc,jdbcType=DOUBLE},
+      </if>
+      <if test="numberofcriticalbugsfounduntil != null" >
+        #{numberofcriticalbugsfounduntil,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoWmc != null" >
+        #{ckOoWmc,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNumberofprivatemethods != null" >
+        #{ldhhNumberofprivatemethods,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNumberofprivateattributes != null" >
+        #{wchuNumberofprivateattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNoc != null" >
+        #{wchuNoc,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoFanout != null" >
+        #{ckOoFanout,jdbcType=DOUBLE},
+      </if>
+      <if test="cvslogentropy != null" >
+        #{cvslogentropy,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNumberofattributesinherited != null" >
+        #{ldhhNumberofattributesinherited,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoNumberoflinesofcode != null" >
+        #{ckOoNumberoflinesofcode,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoDit != null" >
+        #{ckOoDit,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuWmc != null" >
+        #{wchuWmc,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNoc != null" >
+        #{ldhhNoc,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoNumberofmethods != null" >
+        #{ckOoNumberofmethods,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoNumberofattributesinherited != null" >
+        #{ckOoNumberofattributesinherited,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuDit != null" >
+        #{wchuDit,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoLcom != null" >
+        #{ckOoLcom,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoFanin != null" >
+        #{ckOoFanin,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNumberofattributesinherited != null" >
+        #{wchuNumberofattributesinherited,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoRfc != null" >
+        #{ckOoRfc,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhWmc != null" >
+        #{ldhhWmc,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNumberofattributes != null" >
+        #{ldhhNumberofattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNumberoflinesofcode != null" >
+        #{ldhhNumberoflinesofcode,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuFanout != null" >
+        #{wchuFanout,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuLcom != null" >
+        #{wchuLcom,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoCbo != null" >
+        #{ckOoCbo,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuRfc != null" >
+        #{wchuRfc,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoNumberofattributes != null" >
+        #{ckOoNumberofattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="numberofhighprioritybugsfounduntil != null" >
+        #{numberofhighprioritybugsfounduntil,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoNumberofprivateattributes != null" >
+        #{ckOoNumberofprivateattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="numberofmajorbugsfounduntil != null" >
+        #{numberofmajorbugsfounduntil,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNumberofpublicmethods != null" >
+        #{wchuNumberofpublicmethods,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhDit != null" >
+        #{ldhhDit,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuCbo != null" >
+        #{wchuCbo,jdbcType=DOUBLE},
+      </if>
+      <if test="cvslinentropy != null" >
+        #{cvslinentropy,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNumberofmethodsinherited != null" >
+        #{wchuNumberofmethodsinherited,jdbcType=DOUBLE},
+      </if>
+      <if test="numberofbugsfounduntil != null" >
+        #{numberofbugsfounduntil,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhFanout != null" >
+        #{ldhhFanout,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNumberofmethodsinherited != null" >
+        #{ldhhNumberofmethodsinherited,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhRfc != null" >
+        #{ldhhRfc,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoNumberofmethodsinherited != null" >
+        #{ckOoNumberofmethodsinherited,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoNumberofpublicmethods != null" >
+        #{ckOoNumberofpublicmethods,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhCbo != null" >
+        #{ldhhCbo,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNumberoflinesofcode != null" >
+        #{wchuNumberoflinesofcode,jdbcType=DOUBLE},
+      </if>
+      <if test="cvsexpentropy != null" >
+        #{cvsexpentropy,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNumberofmethods != null" >
+        #{ldhhNumberofmethods,jdbcType=DOUBLE},
+      </if>
+      <if test="classes != null" >
+        #{classes,jdbcType=DOUBLE},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.example.bugcheck.pojo.table.DataExample" resultType="java.lang.Integer" >
+    select count(*) from data
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update data
+    <set >
+      <if test="record.id != null" >
+        Id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.ckOoNumberofprivatemethods != null" >
+        ck_oo_numberOfPrivateMethods = #{record.ckOoNumberofprivatemethods,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ldhhLcom != null" >
+        LDHH_lcom = #{record.ldhhLcom,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ldhhFanin != null" >
+        LDHH_fanIn = #{record.ldhhFanin,jdbcType=DOUBLE},
+      </if>
+      <if test="record.numberofnontrivialbugsfounduntil != null" >
+        numberOfNonTrivialBugsFoundUntil = #{record.numberofnontrivialbugsfounduntil,jdbcType=DOUBLE},
+      </if>
+      <if test="record.wchuNumberofpublicattributes != null" >
+        WCHU_numberOfPublicAttributes = #{record.wchuNumberofpublicattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="record.wchuNumberofattributes != null" >
+        WCHU_numberOfAttributes = #{record.wchuNumberofattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="record.cvswentropy != null" >
+        CvsWEntropy = #{record.cvswentropy,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ldhhNumberofpublicmethods != null" >
+        LDHH_numberOfPublicMethods = #{record.ldhhNumberofpublicmethods,jdbcType=DOUBLE},
+      </if>
+      <if test="record.wchuFanin != null" >
+        WCHU_fanIn = #{record.wchuFanin,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ldhhNumberofprivateattributes != null" >
+        LDHH_numberOfPrivateAttributes = #{record.ldhhNumberofprivateattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="record.cvsentropy != null" >
+        CvsEntropy = #{record.cvsentropy,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ldhhNumberofpublicattributes != null" >
+        LDHH_numberOfPublicAttributes = #{record.ldhhNumberofpublicattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="record.wchuNumberofprivatemethods != null" >
+        WCHU_numberOfPrivateMethods = #{record.wchuNumberofprivatemethods,jdbcType=DOUBLE},
+      </if>
+      <if test="record.wchuNumberofmethods != null" >
+        WCHU_numberOfMethods = #{record.wchuNumberofmethods,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ckOoNumberofpublicattributes != null" >
+        ck_oo_numberOfPublicAttributes = #{record.ckOoNumberofpublicattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ckOoNoc != null" >
+        ck_oo_noc = #{record.ckOoNoc,jdbcType=DOUBLE},
+      </if>
+      <if test="record.numberofcriticalbugsfounduntil != null" >
+        numberOfCriticalBugsFoundUntil = #{record.numberofcriticalbugsfounduntil,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ckOoWmc != null" >
+        ck_oo_wmc = #{record.ckOoWmc,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ldhhNumberofprivatemethods != null" >
+        LDHH_numberOfPrivateMethods = #{record.ldhhNumberofprivatemethods,jdbcType=DOUBLE},
+      </if>
+      <if test="record.wchuNumberofprivateattributes != null" >
+        WCHU_numberOfPrivateAttributes = #{record.wchuNumberofprivateattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="record.wchuNoc != null" >
+        WCHU_noc = #{record.wchuNoc,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ckOoFanout != null" >
+        ck_oo_fanOut = #{record.ckOoFanout,jdbcType=DOUBLE},
+      </if>
+      <if test="record.cvslogentropy != null" >
+        CvsLogEntropy = #{record.cvslogentropy,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ldhhNumberofattributesinherited != null" >
+        LDHH_numberOfAttributesInherited = #{record.ldhhNumberofattributesinherited,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ckOoNumberoflinesofcode != null" >
+        ck_oo_numberOfLinesOfCode = #{record.ckOoNumberoflinesofcode,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ckOoDit != null" >
+        ck_oo_dit = #{record.ckOoDit,jdbcType=DOUBLE},
+      </if>
+      <if test="record.wchuWmc != null" >
+        WCHU_wmc = #{record.wchuWmc,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ldhhNoc != null" >
+        LDHH_noc = #{record.ldhhNoc,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ckOoNumberofmethods != null" >
+        ck_oo_numberOfMethods = #{record.ckOoNumberofmethods,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ckOoNumberofattributesinherited != null" >
+        ck_oo_numberOfAttributesInherited = #{record.ckOoNumberofattributesinherited,jdbcType=DOUBLE},
+      </if>
+      <if test="record.wchuDit != null" >
+        WCHU_dit = #{record.wchuDit,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ckOoLcom != null" >
+        ck_oo_lcom = #{record.ckOoLcom,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ckOoFanin != null" >
+        ck_oo_fanIn = #{record.ckOoFanin,jdbcType=DOUBLE},
+      </if>
+      <if test="record.wchuNumberofattributesinherited != null" >
+        WCHU_numberOfAttributesInherited = #{record.wchuNumberofattributesinherited,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ckOoRfc != null" >
+        ck_oo_rfc = #{record.ckOoRfc,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ldhhWmc != null" >
+        LDHH_wmc = #{record.ldhhWmc,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ldhhNumberofattributes != null" >
+        LDHH_numberOfAttributes = #{record.ldhhNumberofattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ldhhNumberoflinesofcode != null" >
+        LDHH_numberOfLinesOfCode = #{record.ldhhNumberoflinesofcode,jdbcType=DOUBLE},
+      </if>
+      <if test="record.wchuFanout != null" >
+        WCHU_fanOut = #{record.wchuFanout,jdbcType=DOUBLE},
+      </if>
+      <if test="record.wchuLcom != null" >
+        WCHU_lcom = #{record.wchuLcom,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ckOoCbo != null" >
+        ck_oo_cbo = #{record.ckOoCbo,jdbcType=DOUBLE},
+      </if>
+      <if test="record.wchuRfc != null" >
+        WCHU_rfc = #{record.wchuRfc,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ckOoNumberofattributes != null" >
+        ck_oo_numberOfAttributes = #{record.ckOoNumberofattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="record.numberofhighprioritybugsfounduntil != null" >
+        numberOfHighPriorityBugsFoundUntil = #{record.numberofhighprioritybugsfounduntil,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ckOoNumberofprivateattributes != null" >
+        ck_oo_numberOfPrivateAttributes = #{record.ckOoNumberofprivateattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="record.numberofmajorbugsfounduntil != null" >
+        numberOfMajorBugsFoundUntil = #{record.numberofmajorbugsfounduntil,jdbcType=DOUBLE},
+      </if>
+      <if test="record.wchuNumberofpublicmethods != null" >
+        WCHU_numberOfPublicMethods = #{record.wchuNumberofpublicmethods,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ldhhDit != null" >
+        LDHH_dit = #{record.ldhhDit,jdbcType=DOUBLE},
+      </if>
+      <if test="record.wchuCbo != null" >
+        WCHU_cbo = #{record.wchuCbo,jdbcType=DOUBLE},
+      </if>
+      <if test="record.cvslinentropy != null" >
+        CvsLinEntropy = #{record.cvslinentropy,jdbcType=DOUBLE},
+      </if>
+      <if test="record.wchuNumberofmethodsinherited != null" >
+        WCHU_numberOfMethodsInherited = #{record.wchuNumberofmethodsinherited,jdbcType=DOUBLE},
+      </if>
+      <if test="record.numberofbugsfounduntil != null" >
+        numberOfBugsFoundUntil = #{record.numberofbugsfounduntil,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ldhhFanout != null" >
+        LDHH_fanOut = #{record.ldhhFanout,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ldhhNumberofmethodsinherited != null" >
+        LDHH_numberOfMethodsInherited = #{record.ldhhNumberofmethodsinherited,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ldhhRfc != null" >
+        LDHH_rfc = #{record.ldhhRfc,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ckOoNumberofmethodsinherited != null" >
+        ck_oo_numberOfMethodsInherited = #{record.ckOoNumberofmethodsinherited,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ckOoNumberofpublicmethods != null" >
+        ck_oo_numberOfPublicMethods = #{record.ckOoNumberofpublicmethods,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ldhhCbo != null" >
+        LDHH_cbo = #{record.ldhhCbo,jdbcType=DOUBLE},
+      </if>
+      <if test="record.wchuNumberoflinesofcode != null" >
+        WCHU_numberOfLinesOfCode = #{record.wchuNumberoflinesofcode,jdbcType=DOUBLE},
+      </if>
+      <if test="record.cvsexpentropy != null" >
+        CvsExpEntropy = #{record.cvsexpentropy,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ldhhNumberofmethods != null" >
+        LDHH_numberOfMethods = #{record.ldhhNumberofmethods,jdbcType=DOUBLE},
+      </if>
+      <if test="record.classes != null" >
+        classes = #{record.classes,jdbcType=DOUBLE},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update data
+    set Id = #{record.id,jdbcType=INTEGER},
+      ck_oo_numberOfPrivateMethods = #{record.ckOoNumberofprivatemethods,jdbcType=DOUBLE},
+      LDHH_lcom = #{record.ldhhLcom,jdbcType=DOUBLE},
+      LDHH_fanIn = #{record.ldhhFanin,jdbcType=DOUBLE},
+      numberOfNonTrivialBugsFoundUntil = #{record.numberofnontrivialbugsfounduntil,jdbcType=DOUBLE},
+      WCHU_numberOfPublicAttributes = #{record.wchuNumberofpublicattributes,jdbcType=DOUBLE},
+      WCHU_numberOfAttributes = #{record.wchuNumberofattributes,jdbcType=DOUBLE},
+      CvsWEntropy = #{record.cvswentropy,jdbcType=DOUBLE},
+      LDHH_numberOfPublicMethods = #{record.ldhhNumberofpublicmethods,jdbcType=DOUBLE},
+      WCHU_fanIn = #{record.wchuFanin,jdbcType=DOUBLE},
+      LDHH_numberOfPrivateAttributes = #{record.ldhhNumberofprivateattributes,jdbcType=DOUBLE},
+      CvsEntropy = #{record.cvsentropy,jdbcType=DOUBLE},
+      LDHH_numberOfPublicAttributes = #{record.ldhhNumberofpublicattributes,jdbcType=DOUBLE},
+      WCHU_numberOfPrivateMethods = #{record.wchuNumberofprivatemethods,jdbcType=DOUBLE},
+      WCHU_numberOfMethods = #{record.wchuNumberofmethods,jdbcType=DOUBLE},
+      ck_oo_numberOfPublicAttributes = #{record.ckOoNumberofpublicattributes,jdbcType=DOUBLE},
+      ck_oo_noc = #{record.ckOoNoc,jdbcType=DOUBLE},
+      numberOfCriticalBugsFoundUntil = #{record.numberofcriticalbugsfounduntil,jdbcType=DOUBLE},
+      ck_oo_wmc = #{record.ckOoWmc,jdbcType=DOUBLE},
+      LDHH_numberOfPrivateMethods = #{record.ldhhNumberofprivatemethods,jdbcType=DOUBLE},
+      WCHU_numberOfPrivateAttributes = #{record.wchuNumberofprivateattributes,jdbcType=DOUBLE},
+      WCHU_noc = #{record.wchuNoc,jdbcType=DOUBLE},
+      ck_oo_fanOut = #{record.ckOoFanout,jdbcType=DOUBLE},
+      CvsLogEntropy = #{record.cvslogentropy,jdbcType=DOUBLE},
+      LDHH_numberOfAttributesInherited = #{record.ldhhNumberofattributesinherited,jdbcType=DOUBLE},
+      ck_oo_numberOfLinesOfCode = #{record.ckOoNumberoflinesofcode,jdbcType=DOUBLE},
+      ck_oo_dit = #{record.ckOoDit,jdbcType=DOUBLE},
+      WCHU_wmc = #{record.wchuWmc,jdbcType=DOUBLE},
+      LDHH_noc = #{record.ldhhNoc,jdbcType=DOUBLE},
+      ck_oo_numberOfMethods = #{record.ckOoNumberofmethods,jdbcType=DOUBLE},
+      ck_oo_numberOfAttributesInherited = #{record.ckOoNumberofattributesinherited,jdbcType=DOUBLE},
+      WCHU_dit = #{record.wchuDit,jdbcType=DOUBLE},
+      ck_oo_lcom = #{record.ckOoLcom,jdbcType=DOUBLE},
+      ck_oo_fanIn = #{record.ckOoFanin,jdbcType=DOUBLE},
+      WCHU_numberOfAttributesInherited = #{record.wchuNumberofattributesinherited,jdbcType=DOUBLE},
+      ck_oo_rfc = #{record.ckOoRfc,jdbcType=DOUBLE},
+      LDHH_wmc = #{record.ldhhWmc,jdbcType=DOUBLE},
+      LDHH_numberOfAttributes = #{record.ldhhNumberofattributes,jdbcType=DOUBLE},
+      LDHH_numberOfLinesOfCode = #{record.ldhhNumberoflinesofcode,jdbcType=DOUBLE},
+      WCHU_fanOut = #{record.wchuFanout,jdbcType=DOUBLE},
+      WCHU_lcom = #{record.wchuLcom,jdbcType=DOUBLE},
+      ck_oo_cbo = #{record.ckOoCbo,jdbcType=DOUBLE},
+      WCHU_rfc = #{record.wchuRfc,jdbcType=DOUBLE},
+      ck_oo_numberOfAttributes = #{record.ckOoNumberofattributes,jdbcType=DOUBLE},
+      numberOfHighPriorityBugsFoundUntil = #{record.numberofhighprioritybugsfounduntil,jdbcType=DOUBLE},
+      ck_oo_numberOfPrivateAttributes = #{record.ckOoNumberofprivateattributes,jdbcType=DOUBLE},
+      numberOfMajorBugsFoundUntil = #{record.numberofmajorbugsfounduntil,jdbcType=DOUBLE},
+      WCHU_numberOfPublicMethods = #{record.wchuNumberofpublicmethods,jdbcType=DOUBLE},
+      LDHH_dit = #{record.ldhhDit,jdbcType=DOUBLE},
+      WCHU_cbo = #{record.wchuCbo,jdbcType=DOUBLE},
+      CvsLinEntropy = #{record.cvslinentropy,jdbcType=DOUBLE},
+      WCHU_numberOfMethodsInherited = #{record.wchuNumberofmethodsinherited,jdbcType=DOUBLE},
+      numberOfBugsFoundUntil = #{record.numberofbugsfounduntil,jdbcType=DOUBLE},
+      LDHH_fanOut = #{record.ldhhFanout,jdbcType=DOUBLE},
+      LDHH_numberOfMethodsInherited = #{record.ldhhNumberofmethodsinherited,jdbcType=DOUBLE},
+      LDHH_rfc = #{record.ldhhRfc,jdbcType=DOUBLE},
+      ck_oo_numberOfMethodsInherited = #{record.ckOoNumberofmethodsinherited,jdbcType=DOUBLE},
+      ck_oo_numberOfPublicMethods = #{record.ckOoNumberofpublicmethods,jdbcType=DOUBLE},
+      LDHH_cbo = #{record.ldhhCbo,jdbcType=DOUBLE},
+      WCHU_numberOfLinesOfCode = #{record.wchuNumberoflinesofcode,jdbcType=DOUBLE},
+      CvsExpEntropy = #{record.cvsexpentropy,jdbcType=DOUBLE},
+      LDHH_numberOfMethods = #{record.ldhhNumberofmethods,jdbcType=DOUBLE},
+      classes = #{record.classes,jdbcType=DOUBLE}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.bugcheck.pojo.table.Data" >
+    update data
+    <set >
+      <if test="ckOoNumberofprivatemethods != null" >
+        ck_oo_numberOfPrivateMethods = #{ckOoNumberofprivatemethods,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhLcom != null" >
+        LDHH_lcom = #{ldhhLcom,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhFanin != null" >
+        LDHH_fanIn = #{ldhhFanin,jdbcType=DOUBLE},
+      </if>
+      <if test="numberofnontrivialbugsfounduntil != null" >
+        numberOfNonTrivialBugsFoundUntil = #{numberofnontrivialbugsfounduntil,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNumberofpublicattributes != null" >
+        WCHU_numberOfPublicAttributes = #{wchuNumberofpublicattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNumberofattributes != null" >
+        WCHU_numberOfAttributes = #{wchuNumberofattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="cvswentropy != null" >
+        CvsWEntropy = #{cvswentropy,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNumberofpublicmethods != null" >
+        LDHH_numberOfPublicMethods = #{ldhhNumberofpublicmethods,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuFanin != null" >
+        WCHU_fanIn = #{wchuFanin,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNumberofprivateattributes != null" >
+        LDHH_numberOfPrivateAttributes = #{ldhhNumberofprivateattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="cvsentropy != null" >
+        CvsEntropy = #{cvsentropy,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNumberofpublicattributes != null" >
+        LDHH_numberOfPublicAttributes = #{ldhhNumberofpublicattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNumberofprivatemethods != null" >
+        WCHU_numberOfPrivateMethods = #{wchuNumberofprivatemethods,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNumberofmethods != null" >
+        WCHU_numberOfMethods = #{wchuNumberofmethods,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoNumberofpublicattributes != null" >
+        ck_oo_numberOfPublicAttributes = #{ckOoNumberofpublicattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoNoc != null" >
+        ck_oo_noc = #{ckOoNoc,jdbcType=DOUBLE},
+      </if>
+      <if test="numberofcriticalbugsfounduntil != null" >
+        numberOfCriticalBugsFoundUntil = #{numberofcriticalbugsfounduntil,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoWmc != null" >
+        ck_oo_wmc = #{ckOoWmc,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNumberofprivatemethods != null" >
+        LDHH_numberOfPrivateMethods = #{ldhhNumberofprivatemethods,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNumberofprivateattributes != null" >
+        WCHU_numberOfPrivateAttributes = #{wchuNumberofprivateattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNoc != null" >
+        WCHU_noc = #{wchuNoc,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoFanout != null" >
+        ck_oo_fanOut = #{ckOoFanout,jdbcType=DOUBLE},
+      </if>
+      <if test="cvslogentropy != null" >
+        CvsLogEntropy = #{cvslogentropy,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNumberofattributesinherited != null" >
+        LDHH_numberOfAttributesInherited = #{ldhhNumberofattributesinherited,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoNumberoflinesofcode != null" >
+        ck_oo_numberOfLinesOfCode = #{ckOoNumberoflinesofcode,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoDit != null" >
+        ck_oo_dit = #{ckOoDit,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuWmc != null" >
+        WCHU_wmc = #{wchuWmc,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNoc != null" >
+        LDHH_noc = #{ldhhNoc,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoNumberofmethods != null" >
+        ck_oo_numberOfMethods = #{ckOoNumberofmethods,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoNumberofattributesinherited != null" >
+        ck_oo_numberOfAttributesInherited = #{ckOoNumberofattributesinherited,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuDit != null" >
+        WCHU_dit = #{wchuDit,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoLcom != null" >
+        ck_oo_lcom = #{ckOoLcom,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoFanin != null" >
+        ck_oo_fanIn = #{ckOoFanin,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNumberofattributesinherited != null" >
+        WCHU_numberOfAttributesInherited = #{wchuNumberofattributesinherited,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoRfc != null" >
+        ck_oo_rfc = #{ckOoRfc,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhWmc != null" >
+        LDHH_wmc = #{ldhhWmc,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNumberofattributes != null" >
+        LDHH_numberOfAttributes = #{ldhhNumberofattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNumberoflinesofcode != null" >
+        LDHH_numberOfLinesOfCode = #{ldhhNumberoflinesofcode,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuFanout != null" >
+        WCHU_fanOut = #{wchuFanout,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuLcom != null" >
+        WCHU_lcom = #{wchuLcom,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoCbo != null" >
+        ck_oo_cbo = #{ckOoCbo,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuRfc != null" >
+        WCHU_rfc = #{wchuRfc,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoNumberofattributes != null" >
+        ck_oo_numberOfAttributes = #{ckOoNumberofattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="numberofhighprioritybugsfounduntil != null" >
+        numberOfHighPriorityBugsFoundUntil = #{numberofhighprioritybugsfounduntil,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoNumberofprivateattributes != null" >
+        ck_oo_numberOfPrivateAttributes = #{ckOoNumberofprivateattributes,jdbcType=DOUBLE},
+      </if>
+      <if test="numberofmajorbugsfounduntil != null" >
+        numberOfMajorBugsFoundUntil = #{numberofmajorbugsfounduntil,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNumberofpublicmethods != null" >
+        WCHU_numberOfPublicMethods = #{wchuNumberofpublicmethods,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhDit != null" >
+        LDHH_dit = #{ldhhDit,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuCbo != null" >
+        WCHU_cbo = #{wchuCbo,jdbcType=DOUBLE},
+      </if>
+      <if test="cvslinentropy != null" >
+        CvsLinEntropy = #{cvslinentropy,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNumberofmethodsinherited != null" >
+        WCHU_numberOfMethodsInherited = #{wchuNumberofmethodsinherited,jdbcType=DOUBLE},
+      </if>
+      <if test="numberofbugsfounduntil != null" >
+        numberOfBugsFoundUntil = #{numberofbugsfounduntil,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhFanout != null" >
+        LDHH_fanOut = #{ldhhFanout,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNumberofmethodsinherited != null" >
+        LDHH_numberOfMethodsInherited = #{ldhhNumberofmethodsinherited,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhRfc != null" >
+        LDHH_rfc = #{ldhhRfc,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoNumberofmethodsinherited != null" >
+        ck_oo_numberOfMethodsInherited = #{ckOoNumberofmethodsinherited,jdbcType=DOUBLE},
+      </if>
+      <if test="ckOoNumberofpublicmethods != null" >
+        ck_oo_numberOfPublicMethods = #{ckOoNumberofpublicmethods,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhCbo != null" >
+        LDHH_cbo = #{ldhhCbo,jdbcType=DOUBLE},
+      </if>
+      <if test="wchuNumberoflinesofcode != null" >
+        WCHU_numberOfLinesOfCode = #{wchuNumberoflinesofcode,jdbcType=DOUBLE},
+      </if>
+      <if test="cvsexpentropy != null" >
+        CvsExpEntropy = #{cvsexpentropy,jdbcType=DOUBLE},
+      </if>
+      <if test="ldhhNumberofmethods != null" >
+        LDHH_numberOfMethods = #{ldhhNumberofmethods,jdbcType=DOUBLE},
+      </if>
+      <if test="classes != null" >
+        classes = #{classes,jdbcType=DOUBLE},
+      </if>
+    </set>
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.bugcheck.pojo.table.Data" >
+    update data
+    set ck_oo_numberOfPrivateMethods = #{ckOoNumberofprivatemethods,jdbcType=DOUBLE},
+      LDHH_lcom = #{ldhhLcom,jdbcType=DOUBLE},
+      LDHH_fanIn = #{ldhhFanin,jdbcType=DOUBLE},
+      numberOfNonTrivialBugsFoundUntil = #{numberofnontrivialbugsfounduntil,jdbcType=DOUBLE},
+      WCHU_numberOfPublicAttributes = #{wchuNumberofpublicattributes,jdbcType=DOUBLE},
+      WCHU_numberOfAttributes = #{wchuNumberofattributes,jdbcType=DOUBLE},
+      CvsWEntropy = #{cvswentropy,jdbcType=DOUBLE},
+      LDHH_numberOfPublicMethods = #{ldhhNumberofpublicmethods,jdbcType=DOUBLE},
+      WCHU_fanIn = #{wchuFanin,jdbcType=DOUBLE},
+      LDHH_numberOfPrivateAttributes = #{ldhhNumberofprivateattributes,jdbcType=DOUBLE},
+      CvsEntropy = #{cvsentropy,jdbcType=DOUBLE},
+      LDHH_numberOfPublicAttributes = #{ldhhNumberofpublicattributes,jdbcType=DOUBLE},
+      WCHU_numberOfPrivateMethods = #{wchuNumberofprivatemethods,jdbcType=DOUBLE},
+      WCHU_numberOfMethods = #{wchuNumberofmethods,jdbcType=DOUBLE},
+      ck_oo_numberOfPublicAttributes = #{ckOoNumberofpublicattributes,jdbcType=DOUBLE},
+      ck_oo_noc = #{ckOoNoc,jdbcType=DOUBLE},
+      numberOfCriticalBugsFoundUntil = #{numberofcriticalbugsfounduntil,jdbcType=DOUBLE},
+      ck_oo_wmc = #{ckOoWmc,jdbcType=DOUBLE},
+      LDHH_numberOfPrivateMethods = #{ldhhNumberofprivatemethods,jdbcType=DOUBLE},
+      WCHU_numberOfPrivateAttributes = #{wchuNumberofprivateattributes,jdbcType=DOUBLE},
+      WCHU_noc = #{wchuNoc,jdbcType=DOUBLE},
+      ck_oo_fanOut = #{ckOoFanout,jdbcType=DOUBLE},
+      CvsLogEntropy = #{cvslogentropy,jdbcType=DOUBLE},
+      LDHH_numberOfAttributesInherited = #{ldhhNumberofattributesinherited,jdbcType=DOUBLE},
+      ck_oo_numberOfLinesOfCode = #{ckOoNumberoflinesofcode,jdbcType=DOUBLE},
+      ck_oo_dit = #{ckOoDit,jdbcType=DOUBLE},
+      WCHU_wmc = #{wchuWmc,jdbcType=DOUBLE},
+      LDHH_noc = #{ldhhNoc,jdbcType=DOUBLE},
+      ck_oo_numberOfMethods = #{ckOoNumberofmethods,jdbcType=DOUBLE},
+      ck_oo_numberOfAttributesInherited = #{ckOoNumberofattributesinherited,jdbcType=DOUBLE},
+      WCHU_dit = #{wchuDit,jdbcType=DOUBLE},
+      ck_oo_lcom = #{ckOoLcom,jdbcType=DOUBLE},
+      ck_oo_fanIn = #{ckOoFanin,jdbcType=DOUBLE},
+      WCHU_numberOfAttributesInherited = #{wchuNumberofattributesinherited,jdbcType=DOUBLE},
+      ck_oo_rfc = #{ckOoRfc,jdbcType=DOUBLE},
+      LDHH_wmc = #{ldhhWmc,jdbcType=DOUBLE},
+      LDHH_numberOfAttributes = #{ldhhNumberofattributes,jdbcType=DOUBLE},
+      LDHH_numberOfLinesOfCode = #{ldhhNumberoflinesofcode,jdbcType=DOUBLE},
+      WCHU_fanOut = #{wchuFanout,jdbcType=DOUBLE},
+      WCHU_lcom = #{wchuLcom,jdbcType=DOUBLE},
+      ck_oo_cbo = #{ckOoCbo,jdbcType=DOUBLE},
+      WCHU_rfc = #{wchuRfc,jdbcType=DOUBLE},
+      ck_oo_numberOfAttributes = #{ckOoNumberofattributes,jdbcType=DOUBLE},
+      numberOfHighPriorityBugsFoundUntil = #{numberofhighprioritybugsfounduntil,jdbcType=DOUBLE},
+      ck_oo_numberOfPrivateAttributes = #{ckOoNumberofprivateattributes,jdbcType=DOUBLE},
+      numberOfMajorBugsFoundUntil = #{numberofmajorbugsfounduntil,jdbcType=DOUBLE},
+      WCHU_numberOfPublicMethods = #{wchuNumberofpublicmethods,jdbcType=DOUBLE},
+      LDHH_dit = #{ldhhDit,jdbcType=DOUBLE},
+      WCHU_cbo = #{wchuCbo,jdbcType=DOUBLE},
+      CvsLinEntropy = #{cvslinentropy,jdbcType=DOUBLE},
+      WCHU_numberOfMethodsInherited = #{wchuNumberofmethodsinherited,jdbcType=DOUBLE},
+      numberOfBugsFoundUntil = #{numberofbugsfounduntil,jdbcType=DOUBLE},
+      LDHH_fanOut = #{ldhhFanout,jdbcType=DOUBLE},
+      LDHH_numberOfMethodsInherited = #{ldhhNumberofmethodsinherited,jdbcType=DOUBLE},
+      LDHH_rfc = #{ldhhRfc,jdbcType=DOUBLE},
+      ck_oo_numberOfMethodsInherited = #{ckOoNumberofmethodsinherited,jdbcType=DOUBLE},
+      ck_oo_numberOfPublicMethods = #{ckOoNumberofpublicmethods,jdbcType=DOUBLE},
+      LDHH_cbo = #{ldhhCbo,jdbcType=DOUBLE},
+      WCHU_numberOfLinesOfCode = #{wchuNumberoflinesofcode,jdbcType=DOUBLE},
+      CvsExpEntropy = #{cvsexpentropy,jdbcType=DOUBLE},
+      LDHH_numberOfMethods = #{ldhhNumberofmethods,jdbcType=DOUBLE},
+      classes = #{classes,jdbcType=DOUBLE}
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
